@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Text Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Minecraft Text Generator</h1>
+        <nav>
+            <a href="./how_to.html">使い方</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form id="text-generator-form">
+                <fieldset>
+                    <legend>General Settings</legend>
+                    <label for="fontSize">Font Size:</label>
+                    <input type="number" id="fontSize" placeholder="Enter font size here" value="30">
+                    <br>
+                    <label for="width">Width:</label>
+                    <input type="number" id="width" placeholder="Enter width here" value="1100">
+                    <br>
+                    <label for="linePaddingSize">Line Padding Size:</label>
+                    <input type="number" id="linePaddingSize" placeholder="Enter line padding size here" value="2">
+                    <br>
+                    <label for="paddingSize">Padding Size:</label>
+                    <input type="number" id="paddingSize" placeholder="Enter padding size here" value="8">
+                </fieldset>
+                <fieldset>
+                    <legend>Color Settings</legend>
+                    <label for="textColor">Text Color:</label>
+                    <input type="color" id="textColor" value="#ffffff">
+                    <br>
+                    <label for="backgroundColor">Background Color:</label>
+                    <input type="color" id="backgroundColor" value="#000000">
+                </fieldset>
+                <fieldset>
+                    <legend>Line Break Settings</legend>
+                    <label>Line Break:</label>
+                    <input type="radio" id="isLineBreakWordCount" name="lineBreak" value="wordCount">
+                    <label for="isLineBreakWordCount">Word Count</label>
+                    <input type="radio" id="isLineBreakWidth" name="lineBreak" value="width" checked>
+                    <label for="isLineBreakWidth">Width</label>
+                    <br>
+                    <label for="lineBreakWordCount">Word Count:</label>
+                    <input type="number" id="lineBreakWordCount" placeholder="Enter word count here" value="30">
+                    <br>
+                    <label for="lineBreakWidth">Width:</label>
+                    <input type="number" id="lineBreakWidth" placeholder="Enter width here" value="1080">
+                </fieldset>
+                <fieldset>
+                    <legend>Text</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter name here">
+                    <br>
+                    <label for="message">Message:</label>
+                    <textarea id="message" placeholder="Enter message here"></textarea>
+                </fieldset>
+                <button type="button" onclick="generate()">Generate</button>
+            </form>
+        </section>
+    </main>
+    <section id="result">
+        <h2>Result</h2>
+        <canvas id="canvas"></canvas>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
