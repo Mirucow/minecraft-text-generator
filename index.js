@@ -87,3 +87,12 @@ async function generate() {
     const bottom = element.scrollHeight - element.clientHeight;
     window.scroll(0, bottom);
 }
+
+function download() {
+    const name = document.getElementById('name').value;
+    const canvas = document.getElementById('canvas');
+    const a = document.createElement('a');
+    a.href = canvas.toDataURL("image/png");
+    a.download = `${name}.png`;
+    a.click();
+}
